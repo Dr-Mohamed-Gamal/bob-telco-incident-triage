@@ -1,0 +1,7 @@
+time,pod,memory_working_set_bytes
+2026-09-22T09:35:30+04:00,balance-service-7d9f8c6b5d-x2k4p,18874368
+2026-09-22T09:35:45+04:00,balance-service-7d9f8c6b5d-x2k4p,35651584
+2026-09-22T09:36:00+04:00,balance-service-7d9f8c6b5d-x2k4p,62914560
+2026-09-22T09:42:00+04:00,balance-service-7d9f8c6b5d-x2k4p,16777216
+2026-09-22T09:42:15+04:00,balance-service-7d9f8c6b5d-x2k4p,44040192
+2026-09-22T09:42:30+04:00,balance-service-7d9f8c6b5d-x2k4p,66060288

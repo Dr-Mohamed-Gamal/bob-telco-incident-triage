@@ -1,0 +1,5 @@
+__pycache__/
+!*.log
+# Created by IBM Bob when the folder is opened
+.vscode/
+.bob/mcp.json

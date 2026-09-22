@@ -1,0 +1,17 @@
+diff --git a/input-documents/deploy/deployment.yaml b/input-documents/deploy/deployment.yaml
+index 380387e..6d9d8e7 100644
+--- a/input-documents/deploy/deployment.yaml
++++ b/input-documents/deploy/deployment.yaml
+@@ -31,10 +31,10 @@ spec:
+           resources:
+             requests:
+               cpu: 100m
+-              memory: 64Mi
++              memory: 192Mi
+             limits:
+               cpu: 500m
+-              memory: 64Mi
++              memory: 256Mi
+           livenessProbe:
+             httpGet:
+               path: /healthz

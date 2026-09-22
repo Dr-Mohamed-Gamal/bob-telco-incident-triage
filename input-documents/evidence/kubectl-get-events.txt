@@ -1,0 +1,6 @@
+LAST SEEN   TYPE      REASON              OBJECT                                  MESSAGE
+48m         Normal    ScalingReplicaSet   deployment/balance-service              Scaled up replica set balance-service-7d9f8c6b5d to 2
+47m         Normal    ScalingReplicaSet   deployment/balance-service              Scaled down replica set balance-service-5c4b9d7f86 to 0
+3m          Warning   Unhealthy           pod/balance-service-7d9f8c6b5d-x2k4p    Readiness probe failed: Get "http://10.128.4.17:8080/readyz": dial tcp 10.128.4.17:8080: connect: connection refused
+2m10s       Warning   OOMKilling          node/worker-3                           Memory cgroup out of memory: Killed process 48121 (python) total-vm:412884kB, anon-rss:65012kB
+2m          Warning   BackOff             pod/balance-service-7d9f8c6b5d-x2k4p    Back-off restarting failed container balance-service in pod balance-service-7d9f8c6b5d-x2k4p_charging

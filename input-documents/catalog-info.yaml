@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: balance-service
+  description: Returns a mobile subscriber's remaining data, minutes and SMS.
+  labels:
+    acme-telco.example/tier: "1"
+spec:
+  type: service
+  lifecycle: production
+  owner: charging-platform
+  system: charging

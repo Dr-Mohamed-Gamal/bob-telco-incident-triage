@@ -1,0 +1,8 @@
+Sep 22 09:36:05 worker-3 kernel: python invoked oom-killer: gfp_mask=0xcc0(GFP_KERNEL), order=0, oom_score_adj=984
+Sep 22 09:36:05 worker-3 kernel: memory: usage 65536kB, limit 65536kB, failcnt 211
+Sep 22 09:36:05 worker-3 kernel: Memory cgroup out of memory: Killed process 47730 (python) total-vm:411920kB, anon-rss:64988kB, file-rss:1196kB, shmem-rss:0kB
+Sep 22 09:36:05 worker-3 kernel: oom_reaper: reaped process 47730 (python), now anon-rss:0kB, file-rss:0kB, shmem-rss:0kB
+Sep 22 09:42:31 worker-3 kernel: python invoked oom-killer: gfp_mask=0xcc0(GFP_KERNEL), order=0, oom_score_adj=984
+Sep 22 09:42:31 worker-3 kernel: memory: usage 65536kB, limit 65536kB, failcnt 229
+Sep 22 09:42:31 worker-3 kernel: Memory cgroup out of memory: Killed process 48121 (python) total-vm:412884kB, anon-rss:65012kB, file-rss:1204kB, shmem-rss:0kB
+Sep 22 09:42:31 worker-3 kernel: oom_reaper: reaped process 48121 (python), now anon-rss:0kB, file-rss:0kB, shmem-rss:0kB

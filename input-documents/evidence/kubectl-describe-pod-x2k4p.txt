@@ -1,0 +1,44 @@
+Name:             balance-service-7d9f8c6b5d-x2k4p
+Namespace:        charging
+Node:             worker-3/10.20.1.13
+Start Time:       Tue, 22 Sep 2026 08:56:31 +0400
+Labels:           app=balance-service
+                  app.kubernetes.io/version=1.5.0
+Status:           Running
+IP:               10.128.4.17
+Controlled By:    ReplicaSet/balance-service-7d9f8c6b5d
+Containers:
+  balance-service:
+    Image:          registry.acme-telco.example/balance-service:1.5.0
+    Port:           8080/TCP
+    State:          Waiting
+      Reason:       CrashLoopBackOff
+    Last State:     Terminated
+      Reason:       OOMKilled
+      Exit Code:    137
+      Started:      Tue, 22 Sep 2026 09:41:52 +0400
+      Finished:     Tue, 22 Sep 2026 09:42:31 +0400
+    Ready:          False
+    Restart Count:  14
+    Limits:
+      cpu:     500m
+      memory:  64Mi
+    Requests:
+      cpu:      100m
+      memory:   64Mi
+    Liveness:   http-get http://:8080/healthz delay=0s timeout=1s period=10s #success=1 #failure=3
+    Readiness:  http-get http://:8080/readyz delay=0s timeout=1s period=10s #success=1 #failure=3
+    Environment:
+      BILLING_API_TOKEN:  <set to the key 'billing-api-token' in secret 'balance-service-secrets'>  Optional: false
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             False
+  ContainersReady   False
+  PodScheduled      True
+QoS Class:          Burstable
+Events:
+  Type     Reason     Age                 From     Message
+  ----     ------     ----                ----     -------
+  Warning  Unhealthy  3m (x40 over 48m)   kubelet  Readiness probe failed: Get "http://10.128.4.17:8080/readyz": dial tcp 10.128.4.17:8080: connect: connection refused
+  Warning  BackOff    2m (x61 over 47m)   kubelet  Back-off restarting failed container balance-service in pod balance-service-7d9f8c6b5d-x2k4p_charging

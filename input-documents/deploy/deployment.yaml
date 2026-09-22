@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: balance-service
+  namespace: charging
+  labels:
+    app: balance-service
+    app.kubernetes.io/version: "1.5.0"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: balance-service
+  template:
+    metadata:
+      labels:
+        app: balance-service
+        app.kubernetes.io/version: "1.5.0"
+    spec:
+      containers:
+        - name: balance-service
+          image: registry.acme-telco.example/balance-service:1.5.0
+          ports:
+            - containerPort: 8080
+          env:
+            - name: BILLING_API_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: balance-service-secrets
+                  key: billing-api-token
+          resources:
+            requests:
+              cpu: 100m
+              memory: 64Mi
+            limits:
+              cpu: 500m
+              memory: 64Mi
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 8080
+          readinessProbe:
+            httpGet:
+              path: /readyz
+              port: 8080
