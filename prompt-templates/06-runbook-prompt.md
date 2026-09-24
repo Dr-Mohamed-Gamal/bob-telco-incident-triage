@@ -1,4 +1,4 @@
-# Write a runbook for the NOC
+# Write a runbook for the application management team
 
 **Mode:** Agent (start a **New Task**)
 
@@ -9,7 +9,7 @@ Next time, the night shift should recognise this problem in minutes, with or wit
 **Prompt:**
 
 ```
-Write a short runbook for the NOC in runbooks/pod-restarts.md.
+Write a short runbook for the application management team in runbooks/pod-restarts.md.
 It should help them spot and fix this problem faster next time.
 ```
 

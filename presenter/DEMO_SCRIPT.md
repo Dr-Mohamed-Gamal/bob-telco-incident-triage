@@ -146,14 +146,14 @@ After:
 
 ---
 
-## Prompt 5: Incident note for the NOC (2 min)
+## Prompt 5: Incident note for the application management team (2 min)
 
 New Task, Agent mode.
 
 Type:
 
 ```
-Write a short incident note for the NOC in reports/incident-note.md.
+Write a short incident note for the application management team in reports/incident-note.md.
 ```
 
 After:
@@ -173,7 +173,7 @@ New Task, Agent mode.
 Type:
 
 ```
-Write a short runbook for the NOC in runbooks/pod-restarts.md.
+Write a short runbook for the application management team in runbooks/pod-restarts.md.
 It should help them spot and fix this problem faster next time.
 ```
 

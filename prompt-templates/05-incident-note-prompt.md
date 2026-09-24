@@ -4,12 +4,12 @@
 
 **Context:**
 
-During an incident, the NOC, the next shift and managers need a short update, not logs. The note is usually pasted into the incident ticket or chat channel. Facts Bob cannot know, such as customer impact, are left for a person.
+During an incident, the application management team, the next shift and managers need a short update, not logs. The note is usually pasted into the incident ticket or chat channel. Facts Bob cannot know, such as customer impact, are left for a person.
 
 **Prompt:**
 
 ```
-Write a short incident note for the NOC in reports/incident-note.md.
+Write a short incident note for the application management team in reports/incident-note.md.
 ```
 
 **Expected result:**

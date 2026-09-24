@@ -14,7 +14,7 @@ Acme Telco is a fictional mobile operator. One of its services is `balance-servi
 
 This morning the team released **version 1.5.0** of `balance-service`, replacing version 1.4.2. According to its release notes, the new version keeps the subscriber list in memory, so balance checks no longer call the billing system every time. Since the release, the service keeps restarting (its pods, the running copies of the application, never stay up), and balance checks fail.
 
-The on-call engineer saved the `kubectl` output and logs in the service's deployment repository. Find the root cause, prove it, fix it, and tell the NOC (Network Operations Center, the team that watches the services around the clock). No cluster is needed, and there is nothing to install.
+The on-call engineer saved the `kubectl` output and logs in the service's deployment repository. Find the root cause, prove it, fix it, and tell the application management team (the team that runs and supports the application in production). No cluster is needed, and there is nothing to install.
 
 ---
 
@@ -115,12 +115,12 @@ Memory request `192Mi` and limit `256Mi`, the values the release notes ask for. 
 
 ### Step 6: Write the incident note
 
-**Why this step:** During an incident, the NOC, the next shift and managers need a short update, not logs. The note is usually pasted into the incident ticket or chat channel. Facts Bob cannot know, such as customer impact, are left for a person.
+**Why this step:** During an incident, the application management team, the next shift and managers need a short update, not logs. The note is usually pasted into the incident ticket or chat channel. Facts Bob cannot know, such as customer impact, are left for a person.
 
 **Prompt** (Agent mode, New Task):
 
 ```text
-Write a short incident note for the NOC in reports/incident-note.md.
+Write a short incident note for the application management team in reports/incident-note.md.
 ```
 
 Details and expected result: [05-incident-note-prompt.md](prompt-templates/05-incident-note-prompt.md)
@@ -131,14 +131,14 @@ A note with what happened, the impact, the root cause, the fix and the next step
 
 **Show the client:** the `<to fill>` fields, such as customer impact. Bob leaves facts it cannot find for a person to add.
 
-### Step 7: Write a runbook for the NOC
+### Step 7: Write a runbook for the application management team
 
 **Why this step:** Next time, the night shift should recognise this problem in minutes, with or without Bob. The runbook keeps what was learned in this incident with the team.
 
 **Prompt** (Agent mode, New Task):
 
 ```text
-Write a short runbook for the NOC in runbooks/pod-restarts.md.
+Write a short runbook for the application management team in runbooks/pod-restarts.md.
 It should help them spot and fix this problem faster next time.
 ```
 
@@ -266,7 +266,7 @@ Say what was checked, and what still needs a person.
 - A root cause proven with quotes from the evidence, with the symptoms ruled out
 - A one-line fix with values from the release notes
 - A clear line between what the evidence proves and what is only likely
-- An incident note for the NOC, with `<to fill>` where a person must add facts
+- An incident note for the application management team, with `<to fill>` where a person must add facts
 - A runbook, so the next shift can fix the same problem faster
 
 The output of a real run, with review notes, is in [optional-generated-content](optional-generated-content).

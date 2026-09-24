@@ -6,7 +6,7 @@ At 08:56 on 22 Sep 2026, version 1.5.0 of balance-service was rolled out in the 
 
 ## Impact
 
-Both replicas of balance-service (a tier-1 service, `catalog-info.yaml:7`) have been unavailable since 08:56. `<to fill>` customers affected. `<to fill>` support tickets or NOC ticket reference.
+Both replicas of balance-service (a tier-1 service, `catalog-info.yaml:7`) have been unavailable since 08:56. `<to fill>` customers affected. `<to fill>` support tickets or incident ticket reference.
 
 ## Root cause
 
