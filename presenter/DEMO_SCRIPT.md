@@ -107,12 +107,13 @@ Type:
 
 ```
 Is the second pod failing for the same reason?
-Tell me what the evidence proves and what it does not.
+Start with a short yes/no answer.
+Then tell me what the evidence proves and what it does not.
 ```
 
 After:
 
-*"This is my favourite part. Bob says: very likely the same cause. Same replica set, same image, same limits. But not proven. The detailed evidence is for the first pod only, and the second pod runs on another node, worker-5."*
+*"This is my favourite part. Bob answers first: yes, the second pod is failing too. Very likely the same cause. Same replica set, same image, same limits. But not proven. The detailed evidence is for the first pod only, and the second pod runs on another node, worker-5."*
 
 *"And it tells us exactly which command would prove it. It does not claim more than the evidence shows. That is what you want from anyone on your team during an incident."*
 

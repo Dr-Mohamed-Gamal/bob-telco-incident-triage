@@ -84,12 +84,15 @@ The diagnosis starts in plain words: this morning's update needs more memory tha
 
 ```text
 Is the second pod failing for the same reason?
-Tell me what the evidence proves and what it does not.
+Start with a short yes/no answer.
+Then tell me what the evidence proves and what it does not.
 ```
 
 Details and expected result: [03-second-pod-prompt.md](prompt-templates/03-second-pod-prompt.md)
 
 **Outcome:**
+
+The answer starts with a short verdict: yes, the second pod is failing too, probably for the same reason, but that is not proven.
 
 The second pod is from the same replica set and keeps restarting, so the same cause is likely. But the detailed output, the logs and the metrics cover the first pod only, and the second pod runs on another node (`worker-5`). So `OOMKilled` is not proven for it. Bob names the command that would prove it.
 
