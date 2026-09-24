@@ -72,7 +72,7 @@ Details and expected result: [02-diagnose-prompt.md](prompt-templates/02-diagnos
 
 **Outcome:**
 
-The diagnosis starts in plain words: this morning's update needs more memory than the service is allowed to use, so it keeps running out and restarting. Then the technical details: version 1.5.0 loads a subscriber cache at start-up, the deployment still has a `64Mi` limit, so the container is `OOMKilled` (exit code `137`). Every claim quotes the exact line it comes from. The failing readiness probe and a slow billing warning are listed as symptoms, not causes.
+The diagnosis starts in plain words: this morning's update needs more memory than the service is allowed to use, so it keeps running out and restarting. Then the technical details: version 1.5.0 loads a subscriber cache at start-up, the deployment still has a `64Mi` limit, so the container is `OOMKilled` ("Out Of Memory Killed": it used more memory than its limit, so the system stopped it; exit code `137`). Every claim quotes the exact line it comes from. The failing readiness probe and a slow billing warning are listed as symptoms, not causes.
 
 **Show the client:** read the plain-words explanation first, so everyone in the room follows. Then open a file Bob quotes, such as `evidence/worker-3-kernel.log`, to show the evidence is really there.
 
